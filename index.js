@@ -12,7 +12,9 @@ app.use(cors())
 
 app.use("/todo", Authenticate, TodoRouter);
 app.use("/auth", AuthRouter);
-
+app.get("/",(req,res)=>{
+  res.send("local url")
+})
 
 app.listen(port, async () => {
   try {
